@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-min-height: 500; -fx-min-width: 700;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.palexdev.materialfx.demo.controllers.VentesController">
+    <Text text="Mes Ventes" layoutX="430.0" layoutY="30.0" textAlignment="CENTER" > <font>
+        <Font size="30.0" />
+    </font> </Text>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-min-height: 500; -fx-min-width: 300; -fx-background-color: pink;" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="100.0">
+        <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-max-height: 40; -fx-min-height: 40; -fx-max-width: 150; -fx-min-width: 150; -fx-background-color: white;" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+                <children>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Element" wrappingWidth="148.13671875">
+                        <VBox.margin>
+                            <Insets left="1.0" top="15.0" />
+                        </VBox.margin>
+                    </Text>
+                </children></VBox>
+            <VBox layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0" style="-fx-max-height: 30; -fx-min-height: 30; -fx-max-width: 150; -fx-min-width: 150; -fx-background-color: white;" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="150.0">
+                <children>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Quantite" textAlignment="CENTER" wrappingWidth="148.13671875">
+                        <VBox.margin>
+                            <Insets left="1.0" top="15.0" />
+                        </VBox.margin>
+                    </Text>
+                </children></VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white; -fx-max-width: 150;" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="250.0">
+                <children>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Prix Unitaire" textAlignment="CENTER" wrappingWidth="150.0">
+                        <VBox.margin>
+                            <Insets top="15.0" />
+                        </VBox.margin>
+                    </Text>
+                </children>
+            </VBox>
+            <VBox layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0" style="-fx-max-height: 40; -fx-min-height: 40; -fx-max-width: 2000; -fx-min-width: 200; -fx-background-color: white;" AnchorPane.bottomAnchor="400.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                <children>
+                    <MFXComboBox fx:id="Produits" alignment="CENTER" floatingText="Produits" maxHeight="40.0" onAction="#afficherPrixV" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #f2bcff;">
+                        <VBox.margin>
+                            <Insets bottom="2.0" left="10.0" right="10.0" top="5.0" />
+                        </VBox.margin>
+                        <opaqueInsets>
+                            <Insets />
+                        </opaqueInsets>
+                    </MFXComboBox>
+                </children>
+            </VBox>
+            <VBox layoutX="240.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0" style="-fx-max-height: 45; -fx-min-height: 45; -fx-max-width: 200; -fx-min-width: 200; -fx-background-color: white;" AnchorPane.bottomAnchor="300.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="150.0">
+                <children>
+                    <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-min-height: 50;">
+                        <children>
+                            <Text fx:id="textFieldQte" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" wrappingWidth="175.0">
+                                <HBox.margin>
+                                    <Insets top="15.0" />
+                                </HBox.margin>
+                            </Text>
+                            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-min-width: 30;">
+                                <children>
+                                    <Button fx:id="augmenter" mnemonicParsing="false" onAction="#augmenterV" style="-fx-max-width: 25;" text="+">
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="diminuer" mnemonicParsing="false" onAction="#diminuerV" style="-fx-min-width: 25;" text="-">
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                    </Button>
+                                </children>
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </VBox>
+                        </children>
+                    </HBox>
+                </children></VBox>
+            <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" style="-fx-min-height: 30; -fx-max-height: 30; -fx-min-width: 200; -fx-max-width: 200; -fx-background-color: white;" AnchorPane.bottomAnchor="200.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="250.0">
+                <children>
+                    <Text fx:id="monPrixVente" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="200.0">
+                        <VBox.margin>
+                            <Insets top="15.0" />
+                        </VBox.margin>
+                    </Text>
+                </children>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: whitepink;" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="430.0">
+                <children>
+                    <Button mnemonicParsing="false" onAction="#vendre" style="-fx-background-color: #f2bcff;" text="Enregistrer" />
+                </children>
+            </VBox>
+            <VBox layoutX="60.0" layoutY="260.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white; -fx-max-width: 150;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="350.0">
+                <children>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Total" textAlignment="CENTER" wrappingWidth="150.0">
+                        <VBox.margin>
+                            <Insets top="15.0" />
+                        </VBox.margin>
+                    </Text>
+                </children>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" layoutX="240.0" layoutY="260.0" prefHeight="200.0" prefWidth="100.0" style="-fx-min-height: 30; -fx-max-height: 30; -fx-min-width: 200; -fx-max-width: 200; -fx-background-color: white;" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="350.0">
+                <children>
+                    <Text fx:id="totalPrixVente" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="200.0">
+                        <VBox.margin>
+                            <Insets top="15.0" />
+                        </VBox.margin>
+                    </Text>
+                </children>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" layoutX="60.0" layoutY="360.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: pink; -fx-max-width: 150;" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="470.0">
+                <children>
+                    <Text fx:id="notificationVente" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" textAlignment="CENTER" wrappingWidth="150.0">
+                        <VBox.margin>
+                            <Insets top="2.0" />
+                        </VBox.margin>
+                    </Text>
+                </children>
+            </VBox>
+        </children>
+    </AnchorPane>
+</AnchorPane>

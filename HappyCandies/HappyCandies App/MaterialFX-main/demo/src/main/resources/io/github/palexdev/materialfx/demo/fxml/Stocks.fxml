@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-min-height: 500; -fx-min-width: 700;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.palexdev.materialfx.demo.controllers.StocksController">
+   <MFXComboBox fx:id="boxElements" onAction="#montrerStock" floatingText="Stocks" style="-fx-background-color: pink;" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="15.0">
+   </MFXComboBox>
+   <AnchorPane prefHeight="250.0" prefWidth="200.0" style="-fx-min-height: 250; -fx-min-width: 300; -fx-background-color: pink;" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="100.0">
+      <children>
+         <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-max-height: 30; -fx-min-height: 30; -fx-max-width: 150; -fx-min-width: 150; -fx-background-color: white;" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="40.0">
+            <children>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Code" wrappingWidth="148.13671875">
+                  <VBox.margin>
+                     <Insets left="1.0" top="5.0" />
+                  </VBox.margin>
+               </Text>
+            </children></VBox>
+         <VBox layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0" style="-fx-max-height: 30; -fx-min-height: 30; -fx-max-width: 150; -fx-min-width: 150; -fx-background-color: white;" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="90.0">
+            <children>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Quantité en stock" wrappingWidth="148.13671875">
+                  <VBox.margin>
+                     <Insets left="1.0" top="5.0" />
+                  </VBox.margin>
+               </Text>
+            </children></VBox>
+         <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-max-height: 30; -fx-min-height: 30; -fx-max-width: 150; -fx-min-width: 150; -fx-background-color: white;" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="140.0">
+            <children>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Unité" wrappingWidth="148.13671875">
+                  <VBox.margin>
+                     <Insets left="1.0" top="5.0" />
+                  </VBox.margin>
+               </Text>
+            </children></VBox>
+         <VBox layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0" style="-fx-max-height: 30; -fx-min-height: 30; -fx-max-width: 150; -fx-min-width: 150; -fx-background-color: white;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="40.0">
+            <children>
+               <Text fx:id="right1stock" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" wrappingWidth="148.13671875">
+                  <VBox.margin>
+                     <Insets left="1.0" top="5.0" />
+                  </VBox.margin>
+               </Text>
+            </children></VBox>
+         <VBox layoutX="240.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0" style="-fx-max-height: 30; -fx-min-height: 30; -fx-max-width: 150; -fx-min-width: 150; -fx-background-color: white;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="90.0">
+            <children>
+               <Text fx:id="right2stock" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" wrappingWidth="148.13671875">
+                  <VBox.margin>
+                     <Insets left="1.0" top="5.0" />
+                  </VBox.margin>
+               </Text>
+            </children></VBox>
+         <VBox layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0" style="-fx-max-height: 30; -fx-min-height: 30; -fx-max-width: 150; -fx-min-width: 150; -fx-background-color: white;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="140.0">
+            <children>
+               <Text fx:id="right3stock" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" wrappingWidth="148.13671875">
+                  <VBox.margin>
+                     <Insets left="1.0" top="5.0" />
+                  </VBox.margin>
+               </Text>
+            </children></VBox>
+         <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: whitepink;" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="430.0">
+            <children>
+               <Button mnemonicParsing="false" onAction="#montrerStock" style="-fx-background-color: #f2bcff;" text="Enregistrer" />
+            </children>
+         </VBox>
+      </children>
+   </AnchorPane>
+</AnchorPane>
+
+
